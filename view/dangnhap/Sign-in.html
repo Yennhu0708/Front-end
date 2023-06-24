@@ -1,0 +1,60 @@
+<div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
+
+  <div class="container">
+
+    <div class="row justify-content-center">
+
+      <div class="col-md-8 m-5">
+
+        <form class="row shadow-lg p-3" ng-submit="signin()">
+
+          <div class="m-2 text-center">
+
+            <h1 class="">Đăng Nhập</h1>
+
+          </div>
+
+          <!-- Email -->
+          <div class="col-md-12 m-2">
+
+            <label for="text" class="form-label">Tên Đăng Nhập <span class="text-danger">*</span></label>
+
+            <input type="text" class="form-control" name="username" placeholder="username" id="username"
+              ng-model="username" required />
+
+            <div class="valid-feedback">Email validated</div>
+
+            <div class="invalid-feedback">Vui Lòng Nhập Email</div>
+
+          </div>
+
+          <!-- Phone -->
+          <div class="col-md-12 m-2">
+
+            <label for="Password" class="form-label">Mật Khẩu <span class="text-danger">*</span></label>
+
+            <input type="password" class="form-control" placeholder="Mật Khẩu" id="Password" ng-model="password"
+              required />
+
+            <div class="valid-feedback">Password validated</div>
+
+            <div class="invalid-feedback">Vui Lòng Nhập Mật Khẩu</div>
+
+          </div>
+          <!-- submit button -->
+          <div class="col-md-12 m-2">
+
+            <button id="submitBtn" class="btn btn-info" type="submit" ng-model="login" ng-click="login()">
+
+              Đăng Nhập
+
+            </button>
+            <!-- Button trigger modal -->
+
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

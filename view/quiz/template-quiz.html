@@ -1,0 +1,172 @@
+<div class="row g-0 mt-5 pt-5" ng-show="!inProgess" ng-controller="listCourse">
+
+    <div class="col-lg-4"></div>
+
+    <div class="col-12 col-md-12 col-lg-4">
+
+        <div class="container mb-5 pb-5">
+
+            <div class="card p-3">
+
+                <div class="card-header bg-white">
+                    <h5 class="fw-bold">Thông tin</h5>
+                </div>
+
+                <div class="card-body">
+                    <h6>Tên môn học: {{ name }}</h6>
+                    <h6>Máy chủ: POCOQuizz</h6>
+                    <h6>Khoá học khác: <a href="#" class="text-primary">http://pocoquiz.com</h6>
+                </div>
+
+                <hr>
+
+                <div class="card-bottom ms-5 mx-5 mt-2">
+                    <a class="btn btn-primary rounded-1 w-100" type="submit" ng-click="start()">
+                        Bắt đầu làm Quizz</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+<!-- form làm bài và kết thúc -->
+
+<section class="inner-page" ng-show="inProgess" ng-controller="listCourse">
+
+    <!-- form kết thúc làm quizz -->
+    <div class="start-quizz mt-5 pt-5" ng-show="quizOver">
+
+        <div class="row g-0">
+
+            <div class="col-lg-4"></div>
+
+            <div class="col-12 col-md-12 col-lg-4">
+
+                <div class="container mb-5 pb-5">
+
+                    <div class="card p-3">
+
+                        <div class="card-header bg-white">
+                            <h5 class="fw-bold">Thông tin</h5>
+                        </div>
+
+                        <div class="card-body">
+                            <h6>Tên môn học: {{ subjectName }}</h6>
+                            <h6>Máy chủ: POCOQuizz</h6>
+                            <h6>Điểm của bạn là: {{ score }}</h6>
+                        </div>
+
+                        <hr>
+
+                        <div class="card-bottom row ms-5 mx-5 mt-2">
+
+                            <div class="col-5 col-md-6 col-lg-6">
+                                <a class="btn btn-primary" href="#!/khoa-hoc" role="button">Làm Lại</a>
+                            </div>
+
+                            <div class="col-7 col-md-6 col-lg-6 text-end">
+                                <a class="btn btn-primary" href="#" ng-click="saveQuiz()" role="button">Lưu Kết Quả</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- form làm bài -->
+    <div class="container mt-4 pt-4 mb-5 p-4" style="min-height: 60vh;" ng-show="!quizOver" ng-controller="listCourse">
+
+        <h5 class="fw-bold fs-3 text-danger text-center" id="time">
+            <i class="bi bi-stopwatch"></i>
+            <span>{{ counter | Timer }}</span>
+        </h5>
+
+        <div class="card bg-white rounded-3" style="box-shadow: 4px 4px 4px rgba(190, 190, 190, 0.5);">
+
+            <div class="card-header bg-light p-4 position-relative">
+
+                <div class="row">
+
+                    <div class="col-9 col-md-9 col-lg-9">
+                        <h4 class="text-dark fw-bold">
+                            {{ subjectName }}
+                        </h4>
+                    </div>
+
+                    <div class="col-3 col-md-3 col-lg-3">
+                        <h4 class="text-end fw-bold">{{ id }}/10</h4>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="card-body">
+
+                <h5 class="text-start ps-4 px-4 fw-bold mt-3 mb-4">
+                    {{ question }}
+                </h5>
+
+                <div class="learn">
+
+                    <div class="row ps-4 px-4">
+
+                        <div class="col-12 col-md-12 col-lg-12" ng-repeat="ans in options">
+
+                            <div class="form-check mb-3">
+
+                                <input class="form-check-input" type="radio" id="{{ans.Id}}" name="answer"
+                                    ng-value="{{ans.Id}}">
+
+                                <label class="form-check-label text-dark" for="{{ans.Id}}">
+                                    {{ans.Text}}
+                                </label>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-6 col-md-6 col-lg-6">
+
+                            <div ng-show="answerMode">
+
+                                <a class="btn btn-success mt-3 mb-3 pb-2" ng-click="checkAnswer()" role="button">Kết
+                                    quả</a>
+
+                            </div>
+
+                            <div ng-show="!answerMode">
+
+                                <a class="btn btn-success mt-3 mb-3 pb-2" ng-click="nextQuestion()" role="button">Kế
+                                    tiếp;</a>
+                                <span ng-show="correctAns" class="text-success">Đáp án đúng!</span>
+                                <span ng-show="!correctAns" class="text-danger">Đáp án sai!</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>

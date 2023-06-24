@@ -1,0 +1,69 @@
+<div class="container d-flex flex-column">
+  <div class="row align-items-center justify-content-center
+          min-vh-100">
+    <div class="col-12 col-md-8 col-lg-4">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <form name="formCheck" ng-submit="changePass()">
+            <div class="mb-4">
+              <h5>Đổi Mật Khẩu?</h5>
+            </div>
+
+            <div class="mb-3">
+              <label for="oldpassword" class="form-label">Mật Khẩu Cũ <span class="text-danger">*</span></label>
+
+              <input type="Password" class="form-control" placeholder="" id="password" ng-model="password"
+                name="oldpassword" pattern="^(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*[0-9]).{8,}$" required />
+
+              <div class="valid-feedback">Password validated</div>
+
+              <small class="form-text text-danger"
+                ng-show="formCheck.oldpassword.$touched && formCheck.oldpassword.$invalid">
+                Mât Khẩu phải chữ in hoa,ký tự đặc biệt và có số
+              </small>
+
+              <div class="invalid-feedback">Vui Lòng Nhập Mật Khẩu</div>
+
+            </div>
+
+            <div class="mb-3">
+              <label for="newpassword" class="form-label">Mật Khẩu Mới <span class="text-danger">*</span></label>
+
+              <input type="Password" class="form-control" placeholder="" id="password" ng-model="password"
+                name="newpassword" pattern="^(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*[0-9]).{8,}$" required />
+
+              <div class="valid-feedback">Password validated</div>
+
+              <small class="form-text text-danger"
+                ng-show="formCheck.newpassword.$touched && formCheck.newpassword.$invalid">
+                Mât Khẩu phải chữ in hoa,ký tự đặc biệt và có số
+              </small>
+
+              <div class="invalid-feedback">Vui Lòng Nhập Mật Khẩu</div>
+
+              <div class="mb-3">
+                <label for="repassword" class="form-label">Mật Khẩu Mới <span class="text-danger">*</span></label>
+
+                <input type="Password" class="form-control" placeholder="" id="password" ng-model="password"
+                  name="repassword" pattern="^(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*[0-9]).{8,}$" required />
+
+                <div class="valid-feedback">Password validated</div>
+
+                <small class="form-text text-danger"
+                  ng-show="formCheck.repassword.$touched && formCheck.repassword.$invalid">
+                  Mât Khẩu phải chữ in hoa,ký tự đặc biệt và có số
+                </small>
+
+                <div class="invalid-feedback">Vui Lòng Nhập Mật Khẩu</div>
+              </div>
+              <div class="mb-3 d-grid">
+                <button type="submit" class="btn btn-info">
+                  Đổi Mật Khẩu
+                </button>
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

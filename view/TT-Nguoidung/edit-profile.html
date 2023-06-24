@@ -1,0 +1,110 @@
+<body>
+    <section class="vh-100" style="background-color: #f4f5f7;">
+
+        <div class="container py-5 h-100">
+
+            <div class="row d-flex justify-content-center align-items-center h-100">
+
+                <div class="col col-lg-6 mb-4 mb-lg-0">
+
+                    <div class="card mb-3" style="border-radius: .5rem;">
+
+                        <div name="editCheck" class="row g-0">
+
+                            <div class="col-md-4 gradient-custom text-center text-white p-3"
+                                style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem; ">
+
+                                <img src="/Assets/img/ava1-bg.jpg" alt="Avatar" class="img-fluid my-5"
+                                    style="width: 100px;" />
+
+                                <h3>{{quiz.fullname}}</h3>
+
+                                <button type="submit" class="btn btn-outline-light text-dark "
+                                    ng-click="saveProfile()">Lưu
+                                    thông tin</button>
+
+
+                            </div>
+
+                            <div class="col-md-8">
+
+                                <div class="card-body p-4">
+                                    <div class="row">
+                                        <div class="col-6 mb-3">
+                                            <h6>Thông tin</h6>
+                                        </div>
+                                        <div class="col-6 mb-3">
+                                            <a href="#!changePass/{{ttUser.id}}"
+                                                class="text-info fs-9 text-decoration-none">
+                                                Đổi Mật Khẩu
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <hr class="mt-0 mb-4">
+                                    <div class="row pt-1">
+                                        <div class="col-6 mb-3">
+                                            <fieldset disabled>
+                                                <h6> Họ và Tên:</h6>
+                                                <input type="text" class="form-control" ng-model="quiz.fullname"
+                                                    placeholder="Họ và Tên">
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-6 mb-3">
+                                            <h6>Sinh Nhật:</h6>
+                                            <input type="date" class="form-control" ng-model="quiz.date"
+                                                placeholder="ngày sinh">
+                                        </div>
+                                        <div class="col-6 mb-3">
+                                            <fieldset disabled>
+                                                <h6>Email:</h6>
+                                                <input type="text" class="form-control disable" ng-model="quiz.email"
+                                                    placeholder="email">
+                                            </fieldset>
+                                        </div>
+                                        <div class="col-6 mb-3">
+                                            <h6>Số Điện Thoại:</h6>
+                                            <input type="number" class="form-control" ng-model="quiz.phone"
+                                                placeholder="số điện thoại">
+                                        </div>
+                                    </div>
+                                    <h6>Thời Gian Học</h6>
+
+                                    <hr class="mt-0 mb-4">
+
+                                    <div class="row pt-1">
+
+                                        <div class="col-6 mb-3">
+                                            <h6>Bắt đầu</h6>
+                                            <p class="text-muted">20/12/2022</p>
+                                        </div>
+                                        <div class="col-6 mb-3">
+                                            <h6>Kết Thúc</h6>
+                                            <p class="text-muted">20/12/2023</p>
+                                        </div>
+
+                                    </div>
+                                    <hr class="mt-0 mb-4">
+
+                                    <div class="pt-1 text-center">
+                                        <h6>Điểm Tích Lũy</h6>
+                                        <p>2000 điểm</p>
+                                    </div>
+
+                                    <div class="d-flex justify-content-center">
+                                        <a href="#!"><i class="bi bi-facebook me-3"></i></a>
+                                        <a href="#!"><i class="bi bi-twitter me-3"></i></a>
+                                        <a href="#!"><i class="bi bi-instagram me-3"></i></a>
+                                    </div>
+                                    <a href="#!profile/{{ttUser.id}}" class="text-info fs-5 text-decoration-none">
+                                        <i class="bi bi-arrow-left-circle"></i>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

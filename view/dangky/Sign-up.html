@@ -1,0 +1,192 @@
+<div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
+
+  <div class="container">
+
+    <div class="row justify-content-center">
+
+      <div class="col-md-8 m-5">
+
+        <form class="row shadow-lg p-3" name="formCheck" ng-submit="signup()">
+
+          <div class="m-2 text-center">
+
+            <h1 class="">Đăng Ký Tài khoản</h1>
+
+          </div>
+          <!-- First name and last name -->
+          <div class="col-md-12 m-2">
+
+            <!-- First Name -->
+            <div class="col">
+
+              <label for="user" class="form-label">Tên đăng nhập<span class="text-danger">*</span></label>
+
+              <input type="text" class="form-control" placeholder="Nguyễn Văn A" id="user" ng-model="user" name="user"
+                pattern="^[a-zA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂẾưăạảấầẩẫậắằẳẵặẹẻẽềềểếỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\s\W|_]+$"
+                required />
+              <div class="valid-feedback">Username validated</div>
+              <small class="form-text text-danger" ng-show="formCheck.user.$touched && formCheck.user.$invalid">
+                Vui lòng nhập đúng định dạng
+              </small>
+              <div class="invalid-feedback">
+                Vui Lòng Nhập Họ Và Tên
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Password -->
+          <div class="col-md-12 m-2">
+
+            <label for="password" class="form-label">Mật Khẩu <span class="text-danger">*</span></label>
+
+            <input type="Password" class="form-control" placeholder="" id="password" ng-model="password" name="password"
+              pattern="^(?=.*[A-Z])(?=.*[!@#$%^&*])(?=.*[0-9]).{8,}$" required />
+
+            <div class="valid-feedback">Password validated</div>
+            <small class="form-text text-danger" ng-show="formCheck.password.$touched && formCheck.password.$invalid">
+              Mât Khẩu phải chữ in hoa,ký tự đặc biệt và có số
+            </small>
+            <div class="invalid-feedback">Vui Lòng Nhập Mật Khẩu</div>
+
+          </div>
+
+
+          <div class="col-md-12 m-2">
+
+            <!-- First Name -->
+            <div class="col">
+
+              <label for="fullname" class="form-label">Họ Và Tên <span class="text-danger">*</span></label>
+
+              <input type="text" class="form-control" placeholder="Nguyễn Văn A" id="fullname" ng-model="fullname"
+                name="fullname"
+                pattern="^[a-zA-ZÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚĂĐĨŨƠàáâãèéêìíòóôõùúăđĩũơƯĂẠẢẤẦẨẪẬẮẰẲẴẶẸẺẼỀỀỂẾưăạảấầẩẫậắằẳẵặẹẻẽềềểếỄỆỈỊỌỎỐỒỔỖỘỚỜỞỠỢỤỦỨỪễệỉịọỏốồổỗộớờởỡợụủứừỬỮỰỲỴÝỶỸửữựỳỵỷỹ\s\W|_]+$"
+                required />
+              <div class="valid-feedback">First Name validated</div>
+              <small class="form-text text-danger" ng-show="formCheck.fullname.$touched && formCheck.fullname.$invalid">
+                Vui lòng nhập đúng định dạng của họ tên
+              </small>
+              <div class="invalid-feedback">
+                Vui lòng nhập sHọ và tên
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Email -->
+          <div class="col-md-12 m-2">
+
+            <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+
+            <input type="email" class="form-control" placeholder="Email" id="email" ng-model="email" name="email"
+              pattern="^[a-zA-Z0-9_.+-]+@([a-zA-Z0-9-]+\.)+com$" required />
+
+            <div class="valid-feedback">Email validated</div>
+            <small class="form-text text-danger" ng-show="formCheck.email.$touched && formCheck.email.$invalid">
+              Vui lòng nhập đúng định dạng email
+            </small>
+            <div class="invalid-feedback">Vui Lòng Nhập Email</div>
+          </div>
+
+          <!-- Phone -->
+          <div class="col-md-12 m-2">
+            <label for="phone" class="form-label">Số Điện Thoại <span class="text-danger">*</span></label>
+
+            <input type="number" class="form-control" placeholder="Phone" id="phone" ng-model="phone" name="phone"
+              pattern="^(0?)(3[2-9]|5[6|8|9]|7[0|6-9]|8[0-6|8|9]|9[0-4|6-9])[0-9]{7}$" required />
+
+            <div class="valid-feedback">Phone validated</div>
+            <small class="form-text text-danger" ng-show="formCheck.phone.$touched && formCheck.phone.$invalid">
+              Vui lòng nhập đúng định dạng Số Điện Thoại
+            </small>
+            <div class="invalid-feedback">Vui Lòng Nhập Số Điện Thoại</div>
+
+
+          </div>
+
+          <!-- radio button -->
+          <div class="col-md-12 m-2">
+
+            <div class="form-group">
+
+              <label for="form-check" class="form-label">Giới Tính <span class="text-danger">*</span></label>
+
+              <div class="form-check">
+
+                <input type="radio" class="form-check-input" id="radioCheck1" value="true" name="radio-stacked"
+                  ng-model="gender" required />
+
+                <label class="form-check-label" for="radioCheck1">Nam</label>
+
+              </div>
+
+              <div class="form-check">
+
+                <input type="radio" class="form-check-input" id="radioCheck2" value="false" name="radio-stacked"
+                  ng-model="gender" required />
+
+                <label class="form-check-label" for="radioCheck2">Nữ</label>
+
+                <div class="valid-feedback">Option validated</div>
+
+                <div class="invalid-feedback">
+
+                  Vui Lòng Chọn Giới Tính
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- select -->
+          <div class="col-md-12 m-2">
+
+            <label for="birthday" class="form-label">Ngày Sinh <span class="text-danger">*</span></label>
+
+            <input type="date" class="form-control" placeholder="" id="birthday" ng-model="birthday" name="birthday"
+              required />
+            <div class="valid-feedback">Birthday validated</div>
+            <small class="form-text text-danger" ng-show="formCheck.birthday.$touched && formCheck.birthday.$invalid">
+              Vui lòng nhập ngày sinh
+            </small>
+            <div class="invalid-feedback">Vui Lòng Chọn Ngày Sinh</div>
+
+          </div>
+          <!-- checkbox -->
+          <div class="col-md-12 m-2">
+
+            <div class="form-check">
+
+              <input type="checkbox" class="form-check-input" id="checkbox" required />
+
+              <label for="checkbox" class="form-check-label">Đồng Ý Với Điểu Khoản</label>
+
+              <div class="valid-feedback">
+                Thanks for accepting the terms and conditions
+              </div>
+
+              <div class="invalid-feedback">
+                Vui Lòng Đồng Ý Điểu Khoản
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- submit button -->
+          <div class="col-md-12 m-2">
+            <button id="submitBtn" class="btn btn-info" type="submit">
+              Đăng Ký
+            </button>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
